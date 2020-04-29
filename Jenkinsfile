@@ -8,4 +8,7 @@ node('UBUNTU'){
     stage('ArchiveArtifacts'){
         archiveArtifacts 'gameoflife-web/target/*.war'
     }
+    stage('Testreport'){
+        junit 'gameoflife-web/target/*.xml'
+    }
 }
