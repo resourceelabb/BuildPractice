@@ -9,6 +9,6 @@ node('UBUNTU'){
         archiveArtifacts 'gameoflife-web/target/*.war'
     }
     stage('Testreport'){
-        junit 'gameoflife-web/target/*.xml'
+        junit 'gameoflife-web/target/surefire-reports/*.xml'
     }
 }
