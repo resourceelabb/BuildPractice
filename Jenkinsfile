@@ -5,4 +5,7 @@ node('UBUNTU'){
     stage('Package'){
         sh 'mvn package'
     }
+    stage('ArchiveArtifacts'){
+        archiveArtifacts 'gameoflife-web/target/*.war'
+    }
 }
